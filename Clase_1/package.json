@@ -1,0 +1,24 @@
+{
+  "name": "clase1",
+  "version": "1.0.0",
+  "description": "Curso NodeJS",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "NodeJS",
+    "npm"
+  ],
+  "author": "Diego Rubí",
+  "license": "ISC",
+  "dependencies": {
+    "picocolors": "^1.0.0"
+  },
+  "devDependencies": {
+    "standard": "17.1.0"
+  },
+  "eslintConfig": {
+    "extends": "standard"
+  }
+}
