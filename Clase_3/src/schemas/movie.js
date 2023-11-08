@@ -1,4 +1,4 @@
-const z = require("zod");
+import { z } from "zod";
 
 const movieSchema = z.object({
   title: z
@@ -69,15 +69,20 @@ const movieSchema = z.object({
     .max(3),
 });
 
-function validateMovie(object) {
+/**
+ * Validate a movie object
+ * @param {Object} object - Movie object
+ * @returns {Object} - Returns an object with a data property that contains the validated data or an error property that contains the error message
+ */
+export function validateMovie(object) {
   return movieSchema.safeParse(object)
 }
 
-function validatePartialMovie(object) {
+/**
+ * Validate a partial movie object
+ * @param {Object} object - Partial movie object
+ * @returns {Object} - Returns an object with a data property that contains the validated data or an error property that contains the error message
+ */
+export function validatePartialMovie(object) {
   return movieSchema.partial().safeParse(object)
 }
-
-module.exports = {
-    validateMovie,
-    validatePartialMovie
-};
